@@ -5,9 +5,9 @@
 }
 
 body {
-    background-color: aqua;
+    background-color: mediumslateblue;
     color: white;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     min-height: 100vh;
 }
 
@@ -15,41 +15,39 @@ header {
     font-size: 1.5rem;
 }
 
-header, form {
+header, 
+form {
     min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-form input, form button {
+form input, 
+form button {
     padding: 0.5rem;
     padding-left: 1rem;
     font-size: 1.8rem;
     border: none;
     background: white;
     border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
 }
 
 form button {
-    color: rgb(255, 200 , 0);
+    color: rgb(255, 200, 0);
     background: white;
     cursor: pointer;
-    transition: all 0.3 seconds;
-    -webkit-transition: all 0.3 seconds;
-    -moz-transition: all 0.3 seconds;
-    -ms-transition: all 0.3 seconds;
-    -o-transition: all 0.3 seconds;
+    transition: all 0.3 second;
     margin-left: 0.5rem;
+    -webkit-transition: all 0.3 second;
+    -moz-transition: all 0.3 second;
+    -ms-transition: all 0.3 second;
+    -o-transition: all 0.3 second;
 }
 
 form button:hover {
     color: white;
-    background: rgb(255, 200 , 0);
+    background: rgb(255, 200, 0);
 }
 
 .fa-plus-circle {
@@ -78,22 +76,15 @@ form button:hover {
     justify-content: space-between;
     align-items: center;
     transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
     border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
 }
 
-.todo {
+.todo li {
     flex: 1;
 }
 
-.trash-btn, .complete-btn {
+.trash-btn, 
+.complete-btn {
     color: white;
     border: none;
     padding: 1rem;
@@ -102,7 +93,7 @@ form button:hover {
 }
 
 .complete-btn {
-    background: rgb(255, 200 , 0);
+    background: rgb(255, 200, 0);
 }
 
 .trash-btn {
@@ -115,7 +106,8 @@ form button:hover {
     padding: 0rem 0.5rem;
 }
 
-.fa-trash, .fa-check-circle {
+.fa-trash, 
+.fa-check-circle {
     pointer-events: none;
 }
 
@@ -126,11 +118,15 @@ form button:hover {
 
 .slide {
     transform: translateX(10rem);
-    -webkit-transform: translateX(10rem);
-    -moz-transform: translateX(10rem);
-    -ms-transform: translateX(10rem);
-    -o-transform: translateX(10rem);
     opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
 }
 
 .select {
@@ -138,36 +134,28 @@ form button:hover {
     position: relative;
     overflow: hidden;
     border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
 }
 
 select {
-    color: rgb(255, 200 , 0);
+    color:rgb(255, 200, 0);
     width: 10rem;
     height: 3.2rem;
     cursor: pointer;
     padding: 1rem;
 }
 
-select::after {
+.select::after {
     content: "\25BC";
     position: absolute;
-    background: rgb(255, 200 , 0);
+    background:rgb(255, 200, 0);
     top: 0;
     right: 0;
     padding: 1rem;
     pointer-events: none;
-    transition:all 0.3s ease;
-    -moz-transition:all 0.3s ease;
-    -ms-transition:all 0.3s ease;
-    -o-transition:all 0.3s ease;
-    -webkit-transition:all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.select::after {
+.select::hover::after {
     background: white;
-    color: rgb(255, 200 , 0)ss;
+    color: rgb(255, 200, 0);
 }
